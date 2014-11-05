@@ -2,16 +2,23 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class OperatingSystem extends JApplet
+public class OperatingSystem //extends JApplet
 {
-	private Gui canvas;
-	private Container c;
+	//private Gui canvas;
+	//private Container c;
 	
-	public void init() 
+	public static void main(String[] args) 
 	{ 
-		canvas = new Gui();
-		c = getContentPane();
-		c.add(canvas);
+		Gui canvas = new Gui();
+		
+		JFrame frame = new JFrame();
+		frame.add(canvas);
+		frame.setSize(600, 600);
+		frame.setVisible(true);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
+		//c = getContentPane();
+		//c.add(canvas);
 		//c.setBackground(new Color(0,50,100));
 		//addMouseMotionListener(this);
 	}
